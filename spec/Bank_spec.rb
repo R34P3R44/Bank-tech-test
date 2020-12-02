@@ -10,10 +10,22 @@ describe Bank do
     end
 
     it "checks if the customer can deposit money" do
-        expect(subject.deposit_money(1000)).to eq 1000
+        subject.deposit_money(1000)
+        expect(subject.balance).to eq 1000
     end
 
-    it " checks if the customer can withdraw money" do
-        expect(subject.withdraw_money(-500)).to eq -500
+    it "checks if the customer can withdraw money" do
+        subject.withdraw_money(-500)
+        expect(subject.balance).to eq 500
+    end
+
+    describe Statement do
+        it "checks if the Statement class exist" do
+            expect(Statement.new).to be_truthy()
+        end
+
+        it "prints statment for customer" do
+            expect(subject.print_statement(@statement)).to eq (@statement)
+        end
     end
 end
