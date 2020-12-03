@@ -25,7 +25,9 @@ describe Bank do
         end
 
         it "prints statment for customer" do
-            expect(subject.print_statement(@statement)).to eq (@statement)
+            subject.deposit_money(pay_in)
+            subject.withdraw_money(pay_out)
+            expect(subject.payment_history).to eq ([{:pay_in=>pay_in, :pay_out=>pay_out}])
         end
     end
 end
