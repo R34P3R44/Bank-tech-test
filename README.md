@@ -2,7 +2,6 @@
 
 ## This app emulates a Bank where the client can deposit, withdraw money and check account statement.
 
-
 **# Setup**
 
 1. Clone the below repository:
@@ -38,11 +37,12 @@
     I'd like to view my account statement with dates and time.
 
 
+date || credit || debit || balance
+14/01/2012 || || 500.00 || 2500.00
+13/01/2012 || 2000.00 || || 3000.00
+10/01/2012 || 1000.00 || || 1000.00
+
 
 **### Diagramming**
 
-*![Diagram](https://i.imgur.com/BA47HEM.png)*
-
-		
-
-
+*![Diagram](https://i.imgur.com/gEx6fVg.png)*
